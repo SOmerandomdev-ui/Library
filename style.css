@@ -25,7 +25,7 @@ body > div:nth-child(2) {
      box-shadow: 0px 0px 5px 1px grey;
 }
 
-body > div > div {
+.Add {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,7 +41,7 @@ body > div > div {
       transition: transform 0.3s ease;
 }
 
-body > div > div:hover {
+.Add:hover {
     transform: scale(1.2)
 }
 
@@ -59,7 +59,6 @@ body > div > div:hover {
 .Main {
     display:flex;
     position: absolute;
-    justify-content: flex-end;
     align-items: flex-start;
     top:15%;
     left:35%;
@@ -67,14 +66,56 @@ body > div > div:hover {
     height: 70%;
     border-radius: 20px;
     transition: background-color 0.5s linear;
-    
+    flex-direction: column;
 }
 
-.Main p {
+.title {
+    display: flex;
+   justify-content: space-between; 
+   align-items: center;
+   height:6vh;
+   opacity: 0;
+}
+
+.title p {
+   padding-right:2rem;
+   font-size:1.2rem;
+   font-family: Helvetica;
+   color:red;
+   font-weight:700;
+   padding-top:0.5rem;
+   height:100%;
+}
+
+
+.Main > div {
+    display: flex;
+    padding:1rem;
+    font-size: 2rem;
+    width:100%;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+form p {
+    display: flex;
    padding:1rem;
    font-size:1.2rem;
    font-family: Helvetica;
    color:red;
    font-weight:700;
-   opacity: 0;
+    justify-content:space-between;
+    gap:1rem;
 }
+
+
+form p:last-child > input[type="submit"] {
+    width:100%;
+}
+
+
+form {
+    opacity: 0;
+}
+
+
+
