@@ -112,12 +112,14 @@ AddBook.addEventListener('click', (e) => {
       BookRead.textContent = "Read"
     }
   })
-  console.log(books)
+
   //Code for Deletion of an item 
   Delete.addEventListener('click', (e) => {
     books.forEach (item => {
       if (BookContainer.id == item.ID) {
         BookContainer.remove();
+        books.splice(books.indexOf(item),1)
+        console.log(books)
       }
   })
   })
